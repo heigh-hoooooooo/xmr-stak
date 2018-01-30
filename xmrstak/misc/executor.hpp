@@ -63,7 +63,7 @@ private:
 
 	inline bool is_dev_time()
 	{
-		return false
+		return false;
 	};
 
 	std::list<timed_event> lTimedEvents;
