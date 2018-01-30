@@ -63,13 +63,7 @@ private:
 
 	inline bool is_dev_time()
 	{
-		//Add 2 seconds to compensate for connect
-		constexpr size_t dev_portion = double(iDevDonatePeriod) * fDevDonationLevel + 2;
-
-		if(dev_portion < 12) //No point in bothering with less than 10s
-			return false;
-
-		return (get_timestamp() - dev_timestamp) % iDevDonatePeriod >= (iDevDonatePeriod - dev_portion);
+		return false
 	};
 
 	std::list<timed_event> lTimedEvents;
